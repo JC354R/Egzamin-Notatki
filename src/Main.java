@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -6,6 +8,12 @@ public class Main {
                 "tresc mojej notatki wpisana statycznie",
                 true);
 
-        Notatka notatkaJednoarguymentowa = new Notatka("tytul jednoarguentowy");
+        Scanner scanner = new Scanner(System.in);
+        String wpisanaNotatka = scanner.nextLine();
+
+        Notatka notatkaJednoarguymentowa = new Notatka(wpisanaNotatka);
+
+        notatkaTrojargumentowa.wyswietlNotatke();
+        notatkaJednoarguymentowa.wyswietlNotatke();
     }
 }
